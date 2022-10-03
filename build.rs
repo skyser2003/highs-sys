@@ -26,6 +26,12 @@ fn main() {
                 .join("highs_c_api.h")
                 .to_string_lossy(),
         )
+        .header(
+            include_path
+                .join("highs")
+                .join("HConfig.h")
+                .to_string_lossy(),
+        )
         .clang_args(&[
             &format!("-I{}", include_path.to_string_lossy()),
             &format!("-I{}", src_path.to_string_lossy()),
