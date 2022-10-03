@@ -21,6 +21,7 @@ fn main() {
         // bindings for.
         .header(
             include_path
+                .join("highs")
                 .join("interfaces")
                 .join("highs_c_api.h")
                 .to_string_lossy(),
